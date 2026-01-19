@@ -1,0 +1,35 @@
+
+
+<body>
+  {{> world}}
+</body>
+
+<template name="world">
+  <div id="colors">
+    <button id="blue" style="background-color:blue"></button>
+    <button id="red" class="selected" style="background-color:red"></button>
+    <button id="green" style="background-color:green"></button>
+  </div>
+
+  <x3d>
+    <scene>
+      <PointLight id='point' on='TRUE' intensity='0.9000' color='0.0 0.6 0.0' location='0 100 50 ' radius='500' shadowIntensity='0.3' shadowCascades="1" shadowFilterSize="5" shadowMapSize="512">  </PointLight> 
+
+      <!-- Floor -->
+      <transform id="floor">
+        <shape>
+          <appearance>
+            <material diffuseColor="#4A9"></material>
+          </appearance>
+          <plane center='0,0,-0.5' size="50 50"></plane>
+        </shape>
+      </transform>
+
+      {{#each cubes}}
+          {{> cube}}
+      {{/each}}
+      
+    </scene>
+  </x3d>
+</template>
+

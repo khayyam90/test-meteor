@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+x3d {
+  width: 100vw;
+  height: 100vh;
+}
+
+#colors{
+  position: fixed;
+  display: block;
+  z-index: 999;
+}
+#currentColor{
+  height: 1rem;
+  border: solid 1px black;
+  width: 2rem;
+}
+
+#colors button{
+  width: 2rem;
+  height: 2rem;
+}
+
+button.selected{
+  border: solid 3px black;
+}
